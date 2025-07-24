@@ -7,12 +7,15 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private float moveSpeed = 10f;
 
+    [SerializeField]
+    private float returnTime = 1f;
+
     private ObjectPool weaponPool;
 
     public void Init(ObjectPool pool)
     {
         weaponPool = pool;
-        Invoke(nameof(ReturnToPool), 1f);
+        Invoke(nameof(ReturnToPool), returnTime);
     }
 
     void ReturnToPool()
