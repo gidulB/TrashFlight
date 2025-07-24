@@ -1,34 +1,26 @@
-# === Unity 기본 폴더 (절대 포함 금지) ===
+# Unity 관련 (자동 생성 폴더)
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
-[Bb]uilds/
 UserSettings/
 
-# === Visual Studio & VSCode 설정 ===
+# IDE 설정
 .vs/
-.vscode/
-*.csproj
-*.unityproj
-*.sln
-*.suo
-*.tmp
 *.user
 *.userprefs
+*.suo
 
-# === Unity 프로젝트 설정 중 개인 설정 제외 ===
+# 슬루션/프로젝트 파일 (포함 가능)
+# (제외하지 않음. 일부 프로젝트에서는 필요)
+
+# ProjectSettings 중 제외해야 할 개인 설정
 ProjectSettings/EditorUserSettings.asset
 ProjectSettings/Layouts/
 
-# === OS 관련 숨김 파일 ===
+# OS 및 기타
 .DS_Store
 Thumbs.db
-
-# === 기타 ===
 *.log
 *.bak
-*.old
 *.tmp
-*.swp
-*.swo
