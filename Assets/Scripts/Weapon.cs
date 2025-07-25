@@ -10,6 +10,8 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private float returnTime = 1f;
 
+    public float damage = 1f;
+
     private ObjectPool weaponPool;
 
     public void Init(ObjectPool pool)

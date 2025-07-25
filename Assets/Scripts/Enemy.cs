@@ -23,6 +23,8 @@ public class Enemy : MonoBehaviour
 
     private float minY = -7f;
 
+    private float hp = 1f;
+
     public void SetMoveSpeed(float moveSpeed)
     {
         this.moveSpeed = moveSpeed;
@@ -35,6 +37,21 @@ public class Enemy : MonoBehaviour
         if (transform.position.y < minY)
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Weapon")
+        {
+            Weapon weapon = collision.gameObject.GetComponent<Weapon>();
+            hp -= weapon.damage;
+
+            if (hp <= 0f)
+            {
+                Destroy(gameObject);
+            }
+            Destroy(collision.gameObject);
         }
     }
 }
