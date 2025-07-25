@@ -22,6 +22,12 @@ public class Enemy : MonoBehaviour
     //}
 
     private float minY = -7f;
+
+    public void SetMoveSpeed(float moveSpeed)
+    {
+        this.moveSpeed = moveSpeed;
+    }
+
     // Update is called once per frame
     void Update()
     {
