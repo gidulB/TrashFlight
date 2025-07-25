@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
 
     private float lastShootTime = 0f;
 
+    public float hp = 5f;
+
     // Update is called once per frame
     void Update()
     {
@@ -75,5 +77,17 @@ public class Player : MonoBehaviour
         //    lastShootTime = Time.time;
         //}
 
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            hp--;
+            if (hp <= 0)
+            {
+                Debug.Log("Game Over");
+                Destroy(gameObject);
+            }
+        }
     }
 }
